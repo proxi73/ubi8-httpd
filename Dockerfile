@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/ubi8 
  
 # Update image and install httpd 
-RUN yum update -y && yum install -y httpd && yum clean all –y 
+RUN yum update -y && yum install -y httpd && rm -rf /var/cache/yum
  
 # Expose the default httpd port 80 
 EXPOSE 80 
